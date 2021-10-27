@@ -35,32 +35,32 @@
 
             <div class="card-body">
               
-                <form>
+                <form action="_index.php" method="post">
 
                     <div class="form-col">
 
                       <div class="col m-2">
-                        <input type="text" class="form-control" placeholder="First name" required>
+                        <input name="fname" type="text" class="form-control" placeholder="First name" >
                       </div>
                       
                       <div class="col m-2">
-                        <input type="text" class="form-control" placeholder="Last name" required>
+                        <input name="lname" type="text" class="form-control" placeholder="Last name" >
                       </div>
 
                       <div class="col m-2">
-                        <input type="number" class="form-control" placeholder="Age" required>
+                        <input name="age" type="number" class="form-control" placeholder="Age" >
                       </div>
 
                       <div class="col m-2">
-                        <input type="email" class="form-control" id="inputEmail3" placeholder="Email ID" required>
+                        <input name="emailid" type="email" class="form-control" id="inputEmail3" placeholder="Email ID" >
                       </div>
 
                       <div class="col m-2">
-                        <input type="text" class="form-control" placeholder="School / College / Instituition Name" required>
+                        <input name="sciname" type="text" class="form-control" placeholder="School / College / Instituition Name" >
                       </div>
 
                       <div class="col m-2">
-                        <textarea class="form-control" id="validationTextarea" placeholder="Any message" required></textarea>
+                        <textarea name="textarea" class="form-control" id="validationTextarea" placeholder="Any message" ></textarea>
                       </div>
                       
                       <div class="col m-2">
@@ -95,3 +95,6 @@
 
   </body>
 </html>
+
+
+<!-- INSERT INTO `forminfo` (`srno`, `fname`, `lname`, `age`, `emailid`, `sciname`, `textarea`, `time`) VALUES ('1', 'sample fname', 'sample lname', '20', 'sample@gmail.com', 'saledu', 'you\'re amazing', current_timestamp());  -->
