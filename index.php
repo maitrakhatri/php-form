@@ -89,27 +89,27 @@ if(isset($_POST['submit'])) {
                     <div class="form-col">
 
                       <div class="col m-2">
-                        <input name="fname" type="text" class="form-control" placeholder="First name" >
+                        <input name="fname" type="text" class="form-control" placeholder="First name" required>
                       </div>
                       
                       <div class="col m-2">
-                        <input name="lname" type="text" class="form-control" placeholder="Last name" >
+                        <input name="lname" type="text" class="form-control" placeholder="Last name" required>
                       </div>
 
                       <div class="col m-2">
-                        <input name="age" type="number" class="form-control" placeholder="Age" >
+                        <input name="age" type="number" class="form-control" placeholder="Age" required>
                       </div>
 
                       <div class="col m-2">
-                        <input name="emailid" type="email" class="form-control" id="inputEmail3" placeholder="Email ID" >
+                        <input name="emailid" type="email" class="form-control" id="inputEmail3" placeholder="Email ID" required>
                       </div>
 
                       <div class="col m-2">
-                        <input name="sciname" type="text" class="form-control" placeholder="School / College / Instituition Name" >
+                        <input name="sciname" type="text" class="form-control" placeholder="School / College / Instituition Name" required>
                       </div>
 
                       <div class="col m-2">
-                        <textarea name="textarea" class="form-control" id="validationTextarea" placeholder="Any message" ></textarea>
+                        <textarea name="textarea" class="form-control" id="validationTextarea" placeholder="Any message" required></textarea>
                       </div>
                       
                       <div class="col m-2">
