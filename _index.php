@@ -1,35 +1,16 @@
 <?php
 
-  $server = "localhost";
-  $username = "root";
-  $password = "";
-
-  $con = mysqli_connect($server, $username, $password);
-
-     if ($con) {
-         echo "Sucessfully connected to db";
-    }
-
-    else {
-         die("connection to this db failed due to" . mysqli_connect_error());
-    }
-
-
+$insert = false;
 
 if(isset($_POST['submit'])) {
   
-//   $server = "localhost";
-//   $username = "root";
-//   $password = "";
-
-//   $con = mysqli_connect($server, $username, $password);
-
-  if ($con) {
-    echo "Sucessfully connected to db";
-    }
-
+   $server = "localhost";
+   $username = "root";
+   $password = "";
+   $con = mysqli_connect($server, $username, $password);
+   
     if(!$con) {
-        die("connection to this db failed due to" . mysqli_connect_error());
+         die("connection to this db failed due to" . mysqli_connect_error());
     }
     
       $fname = $_POST['fname'];
@@ -38,11 +19,15 @@ if(isset($_POST['submit'])) {
       $emailid = $_POST['emailid'];
       $sciname = $_POST['sciname'];
       $textarea = $_POST['textarea'];
-    
-      $sql = "INSERT INTO 'phpform'.'forminfo' ('fname', 'lname', 'age', 'emailid', 'sciname', 'textarea', 'time') VALUES ('$fname', '$lname', '$age', '$emailid', '$sciname', '$textarea', current_timestamp());";
+
+      $sql = "INSERT INTO `phpform`.`forminfo` (`fname`, `lname`, `age`, `emailid`, `sciname`, `textarea`) VALUES ('$fname', '$lname', '$age', '$emailid', '$sciname', '$textarea');";
     
       if($con->query($sql) == true){
         echo "Successfully inserted";
+      }
+
+      else {
+          echo "error";
       }
     
       $con->close();
