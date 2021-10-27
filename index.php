@@ -64,7 +64,7 @@
                       </div>
                       
                       <div class="col m-2">
-                        <input class="btn btn-dark" type="submit" value="Submit">
+                        <input name="submit" class="btn btn-dark" type="submit" value="Submit">
                       </div>
                 
                       <div class="col m-2">
